@@ -63,7 +63,7 @@
             this.clear.BackColor = System.Drawing.Color.Peru;
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.clear.Location = new System.Drawing.Point(130, 466);
+            this.clear.Location = new System.Drawing.Point(129, 466);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(49, 42);
             this.clear.TabIndex = 1;
