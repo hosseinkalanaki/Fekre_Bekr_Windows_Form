@@ -1,170 +1,190 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace FekreBekrWindowsForm
+﻿namespace FekreBekrWindowsForm
 {
-    public partial class MainForm : Form
+    public partial class MainForm : System.Windows.Forms.Form
     {
         public MainForm()
         {
             InitializeComponent();
         }
 
-        public int Button1Location { get; set; }
+        private int ylocation;
 
-        //class ButtonColor
-        //{
-        //    public ButtonColor(string buttonname,string radiobuttonname)
-        //    {
-        //        Buttonname = buttonname;
-        //        Radiobuttonname = radiobuttonname;
-        //    }
-
-        //    private string Radiobuttonname;
-
-        //    private string buttonnname;
-
-        //    public string Buttonname
-        //    {
-        //        get
-        //        {
-        //            if (Radiobuttonname=="Red")
-        //            {
-                        
-        //            }
-        //            return buttonnname;
-        //        }
-        //        set
-        //        {
-        //            buttonnname = value;
-        //        }
-        //    }
+        private System.Drawing.Point NewLocation;
 
 
-
-        //}
-
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            Button1Location = 399;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, System.EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
-        private void roundButton1_Click(object sender, EventArgs e)
+        private void roundButton1_Click(object sender, System.EventArgs e)
         {
-            if (blue.Checked == true)
-            {
-                roundButton1.BackColor = Color.Blue;
-            }
             if (red.Checked == true)
             {
-                roundButton1.BackColor = Color.Red;
+                roundButton1.BackColor = System.Drawing.Color.Red;
+            }
+            if (blue.Checked==true)
+            {
+                roundButton1.BackColor = System.Drawing.Color.Blue;
             }
             if (green.Checked == true)
             {
-                roundButton1.BackColor = Color.Green;
+                roundButton1.BackColor = System.Drawing.Color.Green;
             }
             if (yellow.Checked == true)
             {
-                roundButton1.BackColor = Color.Yellow;
+                roundButton1.BackColor = System.Drawing.Color.Yellow;
             }
-            if (fuchsia.Checked == true)
+            if (fuchsia.Checked==true)
             {
-                roundButton1.BackColor = Color.Fuchsia;
+                roundButton1.BackColor = System.Drawing.Color.Fuchsia;
             }
-            if (withe.Checked == true)
+            if (withe.Checked==true)
             {
-                roundButton1.BackColor = Color.White;
+                roundButton1.BackColor = System.Drawing.Color.White;
             }
         }
 
-        private void withe_CheckedChanged(object sender, EventArgs e)
+        private void withe_CheckedChanged(object sender, System.EventArgs e)
         {
 
         }
 
-        private void roundButton2_Click(object sender, EventArgs e)
+        private void roundButton2_Click(object sender, System.EventArgs e)
         {
-            if (blue.Checked == true)
-            {
-                roundButton2.BackColor = Color.Blue;
-                
-            }
             if (red.Checked == true)
             {
-                roundButton2.BackColor = Color.Red;
+                roundButton2.BackColor = System.Drawing.Color.Red;
+            }
+            if (blue.Checked == true)
+            {
+                roundButton2.BackColor = System.Drawing.Color.Blue;
             }
             if (green.Checked == true)
             {
-                roundButton2.BackColor = Color.Green;
+                roundButton2.BackColor = System.Drawing.Color.Green;
             }
             if (yellow.Checked == true)
             {
-                roundButton2.BackColor = Color.Yellow;
+                roundButton2.BackColor = System.Drawing.Color.Yellow;
             }
             if (fuchsia.Checked == true)
             {
-                roundButton2.BackColor = Color.Fuchsia;
+                roundButton2.BackColor = System.Drawing.Color.Fuchsia;
             }
             if (withe.Checked == true)
             {
-                roundButton2.BackColor = Color.White;
+                roundButton2.BackColor = System.Drawing.Color.White;
             }
-
         }
 
-        private void accept_Click(object sender, EventArgs e)
+        private void accept_Click(object sender, System.EventArgs e)
         {
-            if (accept.Text=="تایید")
+            if (roundButton1.BackColor != System.Drawing.Color.Black &&
+                roundButton2.BackColor != System.Drawing.Color.Black &&
+                roundButton3.BackColor != System.Drawing.Color.Black &&
+                roundButton4.BackColor != System.Drawing.Color.Black)
             {
-                roundButton1.Enabled = false;
+                ylocation = roundButton1.Location.Y;
 
-                roundButton2.Enabled = false;
+                buttonchanges newlocation = new buttonchanges(ylocation);
 
-                roundButton3.Enabled = false;
+                NewLocation.Y = newlocation.getlocation();
 
-                roundButton4.Enabled = false;
+                NewLocation.X = roundButton1.Location.X;
 
-                accept.Text = "تکمیل";
+                roundButton1.Location = NewLocation;
+
+                roundButton1.BackColor = System.Drawing.Color.Black;
+
+                NewLocation.X = roundButton2.Location.X;
+
+                roundButton2.Location = NewLocation;
+
+                roundButton2.BackColor = System.Drawing.Color.Black;
+
+                NewLocation.X = roundButton3.Location.X;
+
+                roundButton3.Location = NewLocation;
+
+                roundButton3.BackColor = System.Drawing.Color.Black;
+
+                NewLocation.X = roundButton4.Location.X;
+
+                roundButton4.Location = NewLocation;
+
+                roundButton4.BackColor = System.Drawing.Color.Black;
             }
-
             else
             {
-                roundButton1.Enabled = true;
-
-                roundButton1.Location = new Point(128, 349);
-
-                roundButton2.Enabled = true;
-
-                roundButton2.Location = new Point(166, 349);
-
-                roundButton3.Enabled = true;
-
-                roundButton3.Location = new Point(203, 349);
-
-                roundButton4.Enabled = true;
-
-                roundButton4.Location = new Point(241, 349);
+                System.Windows.Forms.MessageBox.Show("لطفامقادیر را وارد کنید");
             }
+        }
 
+        private void roundButton3_Click(object sender, System.EventArgs e)
+        {
+            if (red.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.Red;
+            }
+            if (blue.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.Blue;
+            }
+            if (green.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.Green;
+            }
+            if (yellow.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.Yellow;
+            }
+            if (fuchsia.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.Fuchsia;
+            }
+            if (withe.Checked == true)
+            {
+                roundButton3.BackColor = System.Drawing.Color.White;
+            }
+        }
 
+        private void roundButton4_Click(object sender, System.EventArgs e)
+        {
+            if (red.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.Red;
+            }
+            if (blue.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.Blue;
+            }
+            if (green.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.Green;
+            }
+            if (yellow.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.Yellow;
+            }
+            if (fuchsia.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.Fuchsia;
+            }
+            if (withe.Checked == true)
+            {
+                roundButton4.BackColor = System.Drawing.Color.White;
+            }
         }
     }
 }

@@ -194,6 +194,7 @@
             this.roundButton4.TabIndex = 19;
             this.roundButton4.Text = "roundButton4";
             this.roundButton4.UseVisualStyleBackColor = false;
+            this.roundButton4.Click += new System.EventHandler(this.roundButton4_Click);
             // 
             // roundButton3
             // 
@@ -205,6 +206,7 @@
             this.roundButton3.TabIndex = 18;
             this.roundButton3.Text = "roundButton3";
             this.roundButton3.UseVisualStyleBackColor = false;
+            this.roundButton3.Click += new System.EventHandler(this.roundButton3_Click);
             // 
             // roundButton2
             // 
