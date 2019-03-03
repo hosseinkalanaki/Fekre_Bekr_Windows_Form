@@ -93,6 +93,7 @@
             this.fuchsia.TabIndex = 3;
             this.fuchsia.TabStop = true;
             this.fuchsia.UseVisualStyleBackColor = false;
+            this.fuchsia.CheckedChanged += new System.EventHandler(this.fuchsia_CheckedChanged);
             // 
             // yellow
             // 
@@ -104,6 +105,7 @@
             this.yellow.TabIndex = 4;
             this.yellow.TabStop = true;
             this.yellow.UseVisualStyleBackColor = true;
+            this.yellow.CheckedChanged += new System.EventHandler(this.yellow_CheckedChanged);
             // 
             // green
             // 
@@ -116,6 +118,7 @@
             this.green.TabIndex = 5;
             this.green.TabStop = true;
             this.green.UseVisualStyleBackColor = false;
+            this.green.CheckedChanged += new System.EventHandler(this.green_CheckedChanged);
             // 
             // red
             // 
@@ -128,6 +131,7 @@
             this.red.TabIndex = 6;
             this.red.TabStop = true;
             this.red.UseVisualStyleBackColor = false;
+            this.red.CheckedChanged += new System.EventHandler(this.red_CheckedChanged);
             // 
             // blue
             // 
@@ -140,6 +144,7 @@
             this.blue.TabIndex = 7;
             this.blue.TabStop = true;
             this.blue.UseVisualStyleBackColor = false;
+            this.blue.CheckedChanged += new System.EventHandler(this.blue_CheckedChanged);
             // 
             // label1
             // 
@@ -273,20 +278,20 @@
 
         private System.Windows.Forms.Button accept;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.RadioButton withe;
-        private System.Windows.Forms.RadioButton fuchsia;
-        private System.Windows.Forms.RadioButton yellow;
-        private System.Windows.Forms.RadioButton green;
-        private System.Windows.Forms.RadioButton red;
-        private System.Windows.Forms.RadioButton blue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private RoundButton roundButton1;
-        private RoundButton roundButton2;
-        private RoundButton roundButton3;
-        private RoundButton roundButton4;
+        public System.Windows.Forms.RadioButton blue;
+        public System.Windows.Forms.RadioButton withe;
+        public System.Windows.Forms.RadioButton fuchsia;
+        public System.Windows.Forms.RadioButton yellow;
+        public System.Windows.Forms.RadioButton green;
+        public System.Windows.Forms.RadioButton red;
+        public RoundButton roundButton1;
+        public RoundButton roundButton2;
+        public RoundButton roundButton3;
+        public RoundButton roundButton4;
     }
 }
 
